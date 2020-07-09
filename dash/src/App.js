@@ -14,17 +14,13 @@ export default class App extends Component {
     const res = await fetch('https://poloniex.com/public?command=returnTicker');
     const json = await res.json();
 
-    
+    // CONVERTE O OBJETO RETORNADO PELA API PARA UM ARRAY DE OBJETOS
     const result = Object.entries(json).map(([key, value]) => {
-      return { id: key, value };
-    });
-
-    const Coins = result.map((item) => {
-      return { id: item.id, last: item.value.last };
+      return { moeda: key, dados: value };
     });
 
     this.setState({
-      allcoins: Coins,
+      allcoins: result,
     });
   }
 
@@ -35,7 +31,8 @@ export default class App extends Component {
       <div className="container">
         <h1>Dash Coins</h1>
 
-        {allcoins !== undefined && <Coins coin={allcoins} />}
+        {/* VERIFICA SE POSSUI ALGUM REGISTRO PARA SER EXIBIDO */}
+        {allcoins !== undefined && <Coins coins={allcoins} />}
       </div>
     );
   }
