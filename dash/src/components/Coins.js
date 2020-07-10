@@ -6,6 +6,7 @@ export default class Coins extends Component {
     console.log(coins);
 
     return (
+      <div className="center">
       <table className="striped center">
         <thead>
           <tr>
@@ -48,6 +49,7 @@ export default class Coins extends Component {
           })}
         </tbody>
       </table>
+      </div>
     );
   }
 }
