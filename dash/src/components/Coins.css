@@ -1,8 +1,31 @@
-.center {
-    font: 100% sans-serif;
-    background-color: green;
+.data {
+    background-clip: border -box;
+    background-color: #ADD8E6;
+    font-size: black;
+    border-bottom: 50px;
+    text-decoration: blink;
+    text-transform: capitalize;
+    border-color: black;
+    border: black;
+    border-style: outset;
     border-collapse: collapse;
-    empty-cells:show;
-    border: 1px solid #7a7;
-    text-align: rigth;
+    width: auto;
+    height: auto;
+    max-width: 1700px;
+    margin-top: 150px;
+    margin-left: 100px;
+    font-weight: 900;
+    font-weight: bolder;
+    text-shadow: none;
+    font-size: 20px;
+
+
+}
+
+.container {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    text-shadow: 0 2px 0;
+    background:  #00a59D;
 }

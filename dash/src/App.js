@@ -11,7 +11,7 @@ export default class App extends Component {
     };
   }
 
-  async componentDidMount2() {
+  async componentDidMount() {
     const res = await fetch('https://poloniex.com/public?command=returnTicker');
     const json = await res.json();
 
@@ -24,7 +24,7 @@ export default class App extends Component {
       allcoins: result,
     });
   }
-  async componentDidMount() {
+  async componentDidMount2() {
     // const res = await fetch('https://poloniex.com/public?command=returnTicker');
     
     var socket = new WebSocket('wss://api2.poloniex.com')
