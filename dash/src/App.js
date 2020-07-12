@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Coins from './components/Coins';
 import './components/Coins.css'
 
+
 export default class App extends Component {
   constructor() {
     super();

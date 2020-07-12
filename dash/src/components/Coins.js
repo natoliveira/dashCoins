@@ -4,76 +4,65 @@ import TableBody from '@material-ui/core/TableBody';
 import TableHead from '@material-ui/core/TableHead';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
+import TableContainer from '@material-ui/core/TableContainer';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 
 export default class Coins extends Component {
-  constructor(param) {
-    super(param)
-
-    this.page = 1
-    this.rowsPerPage = 10
-    this.columns =
-      [
-        "moeda",
-        "last",
-        "lowestAsk",
-        "baseVolume",
-        "high24hr",
-        "highestBid",
-        "isFrozen",
-        "last",
-        "low24hr",
-        "lowestAsk",
-        "percentChange",
-        "quoteVolume",
-      ];
-
-  }
 
   render() {
+    
     const { coins } = this.props;
 
     return (
-      <Table>
-        <div className="data">
-        <TableHead>
-          <TableRow>
-            {this.columns.map((column) => (
-              <TableCell
-                key={column}
-              //align={column.align}
-              //style={{ minWidth: 10}}
-              >
-                {column}
-              </TableCell>
-            ))}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {coins.map(({ moeda, dados }) => {
-            return (
-              <tr>
-                <TableCell><button type="button" className="btn btn-{moeda}">{moeda}</button>
+      <TableContainer component={Paper}>
+        <Table className="coins" size="small">
+          <TableHead>
+            <TableRow>
+              <TableCell align="center">Moeda</TableCell>
+              <TableCell align="center">last&nbsp;</TableCell>
+              <TableCell align="center">lowestAsk&nbsp;</TableCell>
+              <TableCell align="center">baseVolume&nbsp;</TableCell>
+              <TableCell align="center">high24hr</TableCell>
+              <TableCell align="center">highestBid&nbsp;</TableCell>
+              <TableCell align="center">isFrozen&nbsp;</TableCell>
+              <TableCell align="center">last&nbsp;</TableCell>
+              <TableCell align="center">low24hr</TableCell>
+              <TableCell align="center">lowestAsk&nbsp;</TableCell>
+              <TableCell align="center">percentChange&nbsp;</TableCell>
+              <TableCell align="center">quoteVolume&nbsp;</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {coins.map(({ moeda, dados }) => (
+              <TableRow key={moeda}>
+                <TableCell>
+                  <Button 
+                    variant="text" 
+                    color="primary" 
+                    align="center" 
+                    className="btn btn-{moeda}" 
+                  >
+                    {moeda}
+                  </Button>
                 </TableCell>
-                <TableCell>{dados.last} </TableCell>
-                <TableCell>{dados.lowestAsk} </TableCell>
-                <TableCell>{dados.baseVolume} </TableCell>
-                <TableCell>{dados.high24hr} </TableCell>
-                <TableCell>{dados.highestBid} </TableCell>
-                <TableCell>{dados.isFrozen} </TableCell>
-                <TableCell>{dados.last} </TableCell>
-                <TableCell>{dados.low24hr} </TableCell>
-                <TableCell>{dados.lowestAsk} </TableCell>
-                <TableCell>{dados.percentChange} </TableCell>
-                <TableCell>{dados.quoteVolume} </TableCell>
-              
-              </tr>
-            );
-          })}
-        </TableBody>
-        
-       </div>
-      </Table>
-
+                <TableCell color="primary" align="center">{dados.last} </TableCell>
+                <TableCell color="primary" align="center">{dados.lowestAsk} </TableCell>
+                <TableCell color="primary" align="center">{dados.baseVolume} </TableCell>
+                <TableCell color="primary" align="center">{dados.high24hr} </TableCell>
+                <TableCell color="primary" align="center">{dados.highestBid} </TableCell>
+                <TableCell color="primary" align="center">{dados.isFrozen} </TableCell>
+                <TableCell color="primary" align="center">{dados.last} </TableCell>
+                <TableCell color="primary" align="center">{dados.low24hr} </TableCell>
+                <TableCell color="primary" align="center">{dados.lowestAsk} </TableCell>
+                <TableCell color="primary" align="center">{dados.percentChange} </TableCell>
+                <TableCell color="primary" align="center">{dados.quoteVolume} </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     );
   }
+
 }
