@@ -1,21 +1,19 @@
 .coins {
-    background-clip: border -box;
-    background-color: #ADD8E6;
+    
+    background-color: #eefdec;
     font-size: black;
     border-bottom: 50px;
     text-decoration: blink;
-    text-transform: capitalize;
     border-color: black;
     border: black;
     border-style: outset;
     border-collapse: collapse;
-    width: auto;
-    height: auto;
-    max-width: 1700px;
-    margin-top: 100px;
-    margin-left: 100px;
-    font-weight: 900;
-    font-weight: bolder;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: 500;
+    font-weight: normal;
     text-shadow: none;
     font-size: 20px;
 
@@ -24,7 +22,16 @@
 
 .container {
     text-align: center;
-    font-weight: bolder;
+    font-weight: normal;
     font-size: 30px;
     text-shadow: 0 2px 0;
+}
+
+#botao{
+    position:none;
+    height: 30px;
+    width: 100px;
+    background-color: #00A59D;
+    
+
 }

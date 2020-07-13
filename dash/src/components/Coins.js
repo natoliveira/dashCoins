@@ -8,6 +8,8 @@ import TableContainer from '@material-ui/core/TableContainer';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 
+
+
 export default class Coins extends Component {
 
   render() {
@@ -38,10 +40,12 @@ export default class Coins extends Component {
               <TableRow key={moeda}>
                 <TableCell>
                   <Button 
-                    variant="text" 
+                    variant="contained" 
                     color="primary" 
+                    href="https://poloniex.com/public?command=returnTicker"
                     align="center" 
                     className="btn btn-{moeda}" 
+                    id="botao"
                   >
                     {moeda}
                   </Button>
