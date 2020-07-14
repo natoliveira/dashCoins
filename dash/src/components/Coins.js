@@ -44,7 +44,6 @@ export default class Coins extends Component {
                     color="primary" 
                     href="https://poloniex.com/public?command=returnTicker"
                     align="center" 
-                    className="btn btn-{moeda}" 
                     id="botao"
                   >
                     {moeda}
