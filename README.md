@@ -1,8 +1,12 @@
 # dashCoins
 A simple dashboard to show cryptocoins rate
 
-Existem dois react-app`s neste repositorio.
 1- Dentro da pasta 'dash' temos a versao de consulta simples a uma API REST, que retorna um JSON com os valores da cotacao das crypto-moedas
 	-> ao entrar na pasta basta subir o servidor node e a página web com a tabela estatica
-2- Dentro da pasta 'websocketcoins' temos a versao de consulta à um dos canais Websocket da API poloniex.
-	-> ao entrar na pasta basta subir o servidor node e a pagina web exibira uma tabela dinamica com os dados atualizados em tempo real
+
+$ cd dashCoins	#para entrar no diretorio do projeto
+$ cd dash 	#para entrar no diretorio do react-app
+$ yarn		#para instalar as dependencias do projeto 
+		#OBS: pode ser requerido instalacao do framework '@material-ui/core' separadamente logo:
+		# $ npm install --save @material-ui/core
+$ yarn start 	# para subir o servidor e a aplicacao esta em localhost
