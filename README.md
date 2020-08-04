@@ -1,6 +1,6 @@
 ![dashCoins](https://github.com/natoliveira/dashCoins/blob/master/DasCoins.png)
 
-# dashCoins
+# Dash Coins
 A simple dashboard to show cryptocoins rate
 
 1- Dentro da pasta 'dash' temos a versao de consulta simples a uma API REST, que retorna um JSON com os valores da cotacao das crypto-moedas
