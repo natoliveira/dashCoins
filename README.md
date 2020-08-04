@@ -1,4 +1,4 @@
-![dashCoins](https://github.com/natoliveira/dashCoins/blob/master/dashCoins.png)
+![dashCoins](https://github.com/natoliveira/dashCoins/blob/master/DasCoins.png)
 
 # dashCoins
 A simple dashboard to show cryptocoins rate
